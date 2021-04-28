@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Оформление заказа</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+      <div class="col-md-12 col-lg-12">
+        <form class="needs-validation" novalidate>
+            <div class="col-sm-12">
+              <label for="lastName" class="form-label">Введите своё имя</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+            </div>
+          <p></p>
+
+            <div class="col-12">
+              <label for="email" class="form-label"><span class="text-muted">Введите адрес электронной почты</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+              </div>
+            </div>
+          <p></p>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Введите адрес доставки</label>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+              <div class="invalid-feedback">
+              </div>
+            </div>
+          <p></p>
+
+            <div class="col-12">
+              <label>можно заказать до {{ count }} шт.</label>
+            </div>
+
+          <p></p>
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Оформить заказ</button>
+        </form>
+      </div>
+</div>
+
+{% endblock %}
